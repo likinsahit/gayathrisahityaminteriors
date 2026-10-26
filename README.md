@@ -24,24 +24,32 @@ A bespoke, responsive web presence for **Gayathri Sahityam Interior Designs**, a
 
 ```
 ammama-interiors/
-├── .gitignore                      # Git ignore patterns
-├── README.md                       # Project documentation
-├── index.html                      # Main landing page & application
-├── index.original.html             # Original archive pre-redesign
-├── realistic-villa.png             # Hero background & Villa render
-├── realistic-house.png             # Independent residence render
-├── realistic-apartment.png         # Luxury apartment render
-├── concept-apartment.png           # 3D concept render for comparison
-├── project-godavari-residence.png  # Signature project: Rajahmundry
-├── project-kakinada-bedroom.png    # Signature project: Kakinada
-├── hero-luxury-vintage.png         # Signature project: Konaseema
-├── space-modular-kitchen.png       # Specialty space render
-├── space-master-bedroom.png        # Specialty space render
-├── space-childrens-bedroom.png     # Specialty space render
-├── space-pooja-room.png            # Specialty space render
-├── space-living-hall.png           # Specialty space render
-├── space-dining-area.png           # Specialty space render
-└── stock/                          # Additional mood and stock imagery
+├── index.html                      # Semantic, lightweight HTML5 landing page
+├── css/
+│   └── styles.css                  # Modular stylesheet with CSS custom properties & media queries
+├── js/
+│   └── main.js                     # Application logic, interactive sliders, calculators & modals
+├── assets/
+│   └── images/                     # Organized photography, 3D renders, and space captures
+│       ├── realistic-villa.png
+│       ├── realistic-house.png
+│       ├── realistic-apartment.png
+│       ├── concept-apartment.png
+│       ├── project-godavari-residence.png
+│       ├── project-kakinada-bedroom.png
+│       ├── hero-luxury-vintage.png
+│       ├── space-modular-kitchen.png
+│       ├── space-master-bedroom.png
+│       ├── space-childrens-bedroom.png
+│       ├── space-pooja-room.png
+│       ├── space-living-hall.png
+│       ├── space-dining-area.png
+│       └── stock/
+├── archive/
+│   └── index.original.html         # Baseline archive before redesign
+├── README.md                       # Architecture & setup documentation
+├── LICENSE                         # MIT License
+└── .gitignore                      # Git ignore patterns
 ```
 
 ---
