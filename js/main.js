@@ -29,12 +29,14 @@
 
     function openMobileDrawer() {
       mobileDrawer.classList.add("active");
+      lockBodyScroll();
       drawerBackdrop.classList.add("active");
       document.body.style.overflow = "hidden";
     }
 
     function closeMobileDrawer() {
       mobileDrawer.classList.remove("active");
+      unlockBodyScroll();
       drawerBackdrop.classList.remove("active");
       document.body.style.overflow = "";
     }
@@ -129,6 +131,8 @@
       }
     }
     window.addEventListener("resize", updateComparisonWidth);
+    window.addEventListener("orientationchange", () => setTimeout(updateComparisonWidth, 150));
+    window.addEventListener("load", updateComparisonWidth);
     setTimeout(updateComparisonWidth, 100);
 
     let isSliding = false;
@@ -250,10 +254,12 @@
       document.getElementById("spaceModalStorage").textContent = data.storage;
       document.getElementById("spaceModalTimeline").textContent = data.timeline;
       spaceModal.showModal();
+      lockBodyScroll();
     }
 
     function closeSpaceModal() {
       spaceModal.close();
+      unlockBodyScroll();
     }
 
     // 6. Consultation Modal
@@ -263,10 +269,12 @@
         document.getElementById("cNotes").value = "Interested in: " + context + ". ";
       }
       consultModal.showModal();
+      lockBodyScroll();
     }
 
     function closeConsultationModal() {
       consultModal.close();
+      unlockBodyScroll();
     }
 
     function handleConsultSubmit(e) {
@@ -345,6 +353,7 @@
         const isInDialog = (rect.top <= e.clientY && e.clientY <= rect.top + rect.height && rect.left <= e.clientX && e.clientX <= rect.left + rect.width);
         if (!isInDialog) {
           modal.close();
+          unlockBodyScroll();
         }
       });
     });
